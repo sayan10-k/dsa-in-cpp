@@ -50,9 +50,9 @@ Output: "abcabccdcdcdef"
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 28.78%)  
-**Memory:** 9.7 MB (beats 17.32%)  
-**Submitted:** 2026-10-10T16:16:37.595Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 9.8 MB (beats 9.34%)  
+**Submitted:** 2026-10-10T16:24:03.677Z  
 
 ```cpp
 class Solution {
