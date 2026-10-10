@@ -27,7 +27,7 @@ Explanation: Activity 0 finishes at time 20, and activity 2 also starts at time 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-13T15:44:14.929Z  
+**Submitted:** 2026-10-10T16:19:48.937Z  
 
 ```cpp
 class Solution {
