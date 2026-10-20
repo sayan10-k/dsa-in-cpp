@@ -39,9 +39,9 @@ Output: 1
 ## Solution
 
 **Language:** C++  
-**Runtime:** 272 ms (beats 10.83%)  
-**Memory:** 23.7 MB (beats 72.45%)  
-**Submitted:** 2026-10-20T07:31:53.046Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 23.7 MB (beats 41.27%)  
+**Submitted:** 2026-10-20T15:27:34.006Z  
 
 ```cpp
 /**
@@ -57,21 +57,23 @@ Output: 1
  */
 class Solution {
 public:
-    int  height(TreeNode* root){
-        if(root==NULL) return 0;
-        int leftheight=height(root->left);
-        int rightheight=height(root->right);
-        return max(leftheight,rightheight)+1;
+    int ans=0;
+    int height(TreeNode* root) {
+        if(root==NULL) {
+            return 0;
+        }
+        int LH = height(root->left);
+        int RH = height(root->right);
+        ans=max(ans,LH+RH);
+        return max(LH,RH)+1;
 
 
+        
     }
+  
     int diameterOfBinaryTree(TreeNode* root) {
-        if(root==NULL) return 0;
-        int currdiameter=height(root->left) + height(root->right) +1 -1;
-        int ld=diameterOfBinaryTree(root->left);
-        int rd=diameterOfBinaryTree(root->right);
-        return max(currdiameter,max(ld,rd));
-    
+        height(root);
+        return ans;
 
         
     }
