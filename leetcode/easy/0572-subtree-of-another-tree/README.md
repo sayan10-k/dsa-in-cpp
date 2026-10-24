@@ -38,9 +38,9 @@ Output: false
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 38.75%)  
-**Memory:** 28.8 MB (beats 92.23%)  
-**Submitted:** 2026-10-21T07:50:03.585Z  
+**Runtime:** 1 ms (beats 39.34%)  
+**Memory:** 28.9 MB (beats 67.18%)  
+**Submitted:** 2026-10-24T14:52:37.700Z  
 
 ```cpp
 /**
@@ -66,7 +66,10 @@ public:
         if(root1->val != root2->val ) {
             return false;
         }
-        return isidentical(root1->left,root2->left) && isidentical(root1->right,root2->right);
+    
+        bool lt= isidentical(root1->left,root2->left);
+        bool rt=isidentical(root1->right,root2->right);
+        return lt && rt;
 
 
     }
@@ -84,7 +87,9 @@ public:
             }
 
         }
-        return isSubtree(root->left,subRoot)||isSubtree(root->right,subRoot) ;
+        bool lst=isSubtree(root->left,subRoot);
+        bool rst=isSubtree(root->right,subRoot) ;
+        return lst || rst;
         
     }
 };
